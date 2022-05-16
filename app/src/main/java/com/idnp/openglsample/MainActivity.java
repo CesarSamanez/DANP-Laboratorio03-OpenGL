@@ -22,10 +22,12 @@ public class MainActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         // Next, we disable the application's title bar...
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+       // requestWindowFeature(Window.FEATURE_NO_TITLE);
         // ...and the notification bar. That way, we can use the full screen.
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+        //       WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+
 
         // Now let's create an OpenGL surface.
         GLSurfaceView glView = new GLSurfaceView(this);
@@ -37,11 +39,9 @@ public class MainActivity extends AppCompatActivity {
         glView.setRenderer(new GLClearRenderer());
         // Now set this as the main view.
         setContentView(glView);
-
         // Now also create a view which contains the camera preview...
         CameraView cameraView = new CameraView(this);
         // ...and add it, wrapping the full screen size.
-
         getWindow().addContentView(
                 cameraView,
                 new WindowManager.LayoutParams(
