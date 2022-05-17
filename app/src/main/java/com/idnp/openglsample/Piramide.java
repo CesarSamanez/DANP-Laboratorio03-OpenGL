@@ -7,6 +7,9 @@ import java.nio.FloatBuffer;
 import javax.microedition.khronos.opengles.GL10;
 
 public class Piramide {
+    /**
+     * primer comentario
+     */
     //Declaramos un buffer de tipo float para un array de vértices
     private FloatBuffer verticeBuffer;
     //Declaramos un buffer de tipo float para un array de colores.
